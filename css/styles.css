@@ -50,11 +50,11 @@ h2 {
 
 .game {
     border: 1px solid red;
-    width: 430px;
-    height: 430px;
+    width: 450px;
+    height: 450px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
     transform-style: preserve-3d;
     perspective: 500px;
 }
@@ -66,5 +66,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    background-color: #fff;
+    font-size: 3em;
 }
