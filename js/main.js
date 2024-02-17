@@ -32,12 +32,28 @@ function handleClick() {
     if (openCards.length < 2) {
         this.classList.add("boxOpen");
         openCards.push(this);
-        return;
     }
 
     if (openCards.length == 2) {
+        setTimeout(checkMatch, 500);
+    }
+}
+
+function checkMatch() {
+    console.log(openCards)
+
+    if (openCards[0].innerHTML === openCards[1].innerHTML) {
+
+        openCards[0].classList.add("boxMatch");
+        openCards[1].classList.add("boxMatch");
+    } else {
         openCards[0].classList.remove("boxOpen");
         openCards[1].classList.remove("boxOpen");
-        openCards = []
+    }
+    openCards = [];
+    if (document.querySelectorAll(".boxMatch").length === emojis.length) {
+
+        alert("Você venceu !");
+
     }
 }
